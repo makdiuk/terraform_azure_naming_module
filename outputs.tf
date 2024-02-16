@@ -48,14 +48,14 @@ output "alteration" {
   description = "Lowercased alteration."
 }
 
-output "location" {
-  value       = null_resource.label.triggers.location
-  description = "Lowercased Azure location."
+output "region" {
+  value       = null_resource.label.triggers.region
+  description = "Lowercased Azure region."
 }
 
-output "short_location" {
-  value       = null_resource.short_label.triggers.short_location
-  description = "Short version. Lowercased Azure location."
+output "short_region" {
+  value       = null_resource.short_label.triggers.short_region
+  description = "Short version. Lowercased Azure region."
 }
 
 # Merge input tags with our tags.
@@ -64,7 +64,7 @@ output "tags" {
     tomap({
       "Solution"    = null_resource.label.triggers.solution,
       "Environment" = null_resource.label.triggers.environment,
-      "Location"    = null_resource.label.triggers.location,
+      "Region"      = null_resource.label.triggers.region,
       "Alteration"  = null_resource.label.triggers.alteration,
     }), var.tags
   )

@@ -15,8 +15,8 @@ variable "environment" {
   type        = string
 }
 
-variable "location" {
-  description = "location - example: eastus"
+variable "region" {
+  description = "region - example: eastus"
   type        = string
 }
 
@@ -37,9 +37,9 @@ variable "tags" {
 }
 
 #----------------------------------- Specified -----------------------------------
-# Location list and its assertion
-# The short location set according to name conventions.
-variable "short_location_names" {
+# Region list and its assertion
+# The short region set according to name conventions.
+variable "short_region_names" {
   type = map(any)
   default = {
     "eastus"         = "eus"
@@ -65,19 +65,10 @@ variable "environment_list" {
 variable "short_environment_names" {
   type = map(any)
   default = {
-    "prod"     = "p"
-    "prod-b"   = "pb"
-    "dev"      = "d"
-    "sandbox"  = "sbx"
-    "stage"    = "st"
-    "stage-b"  = "stb"
-    "int"      = "i"
-    "shared"   = "sh"
-    "devops"   = "ds"
-    "devops-b" = "dsb"
-    "ops"      = "o"
-    "perftest" = "pst"
-    "cosigner" = "csnr"
-    "global"   = "gbl"
+    "prod"   = "p"
+    "dev"    = "d"
+    "stage"  = "st"
+    "shared" = "sh"
+    "global" = "gbl"
   }
 }
