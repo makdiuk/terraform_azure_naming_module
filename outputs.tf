@@ -48,8 +48,8 @@ output "alteration" {
   description = "Lowercased alteration."
 }
 
-output "region" {
-  value       = null_resource.label.triggers.region
+output "location" {
+  value       = null_resource.label.triggers.location
   description = "Lowercased Azure region."
 }
 
@@ -64,7 +64,7 @@ output "tags" {
     tomap({
       "Solution"    = null_resource.label.triggers.solution,
       "Environment" = null_resource.label.triggers.environment,
-      "Region"      = null_resource.label.triggers.region,
+      "Location"    = null_resource.label.triggers.location,
       "Alteration"  = null_resource.label.triggers.alteration,
     }), var.tags
   )
