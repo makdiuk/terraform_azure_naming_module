@@ -15,8 +15,8 @@ variable "environment" {
   type        = string
 }
 
-variable "region" {
-  description = "region - example: eastus"
+variable "location" {
+  description = "location - example: eastus"
   type        = string
 }
 
@@ -39,7 +39,7 @@ variable "tags" {
 #----------------------------------- Specified -----------------------------------
 # Region list and its assertion
 # The short region set according to name conventions.
-variable "short_region_names" {
+variable "short_location_names" {
   type = map(any)
   default = {
     "eastus"         = "eus"
