@@ -46,6 +46,7 @@ variable "short_location_names" {
     "eastus2"        = "eus2"
     "centralus"      = "clus"
     "northcentralus" = "nclus"
+    "polandcentral"  = "plc"
     "southcentralus" = "sclus"
     "westcentralus"  = "wclus"
     "westus"         = "wus"
